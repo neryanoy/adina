@@ -193,6 +193,49 @@ p { margin: 0; }
 .write-paper .process-head { left: 0; right: 0; top: 947px; text-align: center; }
 .write-paper .process-head h2 { margin-top: 4px; }
 
+/* ---------- publish page ---------- */
+.stage.narrow { width: 1410px; }
+.pub-hero { height: 868px; padding-left: 105px; }
+.pub-hero h1 { font-size: 50px; }
+.pub-hero p { max-width: 443px; margin-top: 11px; line-height: 1.53; }
+.pub-hero p + p { margin-top: 16px; }
+.pub-hero .btn-solid { margin-top: 46px; }
+
+.pub-process { height: 1540px; }
+.pub-process .process-head { left: 0; right: 0; top: 126px; text-align: center; }
+.pub-process .process-head h2 { margin-top: 11px; }
+.pub-card { left: 154px; width: 1103px; height: 250px; border: 2px dashed var(--red); background: rgba(239, 231, 210, .6); }
+.pub-card > * { position: absolute; }
+.pub-card .phase { left: 102px; top: 39px; font-size: 25px; }
+.pub-card h4 { left: 102px; top: 112px; width: 241px; font-size: 32px; line-height: 1.15; }
+.pub-card .text { left: 405px; width: 645px; line-height: 1.53; }
+.pub-note { left: 307px; top: 1314px; width: 847px; font-size: 20px; line-height: 1.4; }
+
+.pub-dark { height: 926px; background: #121820 url("../images/typewriter-still.jpg") center / cover no-repeat; color: #fff; }
+.pub-dark .lead { left: 105px; top: 122px; width: 494px; font-size: 32px; line-height: 1.15; }
+.pub-dark .body { left: 105px; top: 380px; width: 443px; line-height: 1.53; }
+.pub-dark .body p + p { margin-top: 16px; }
+
+.pub-own { height: 1170px; }
+.pub-own .own-text { left: 105px; top: 165px; width: 594px; }
+.pub-own .eyebrow { font-size: 22px; text-transform: uppercase; }
+.pub-own h2 { margin-top: 11px; }
+.pub-own .acc { margin-top: 45px; }
+.pub-own .own-img { left: 862px; top: 99px; width: 548px; height: 872px; object-fit: cover; }
+.pub-own .btn-solid { width: 241px; height: 63px; margin-top: 90px; }
+.acc.dark { border-bottom-color: var(--black); }
+.acc.dark .acc-item { border-top-color: var(--black); }
+.acc.dark .acc-item button { font-size: 32px; padding: 15px 0; }
+.acc.dark .acc-item button .icon::before, .acc.dark .acc-item button .icon::after { background: var(--black); height: 1px; }
+.acc.dark .acc-item button:focus-visible { outline-color: var(--black); }
+.acc.dark .acc-item .answer { max-width: none; font-size: 20px; padding: 16px 0 30px; }
+.acc .answer p + p, .acc .answer ul + p { margin-top: 16px; }
+.acc .answer ul { margin: 16px 0 0; padding-left: 24px; }
+
+.pub-faq { padding: 100px 0 180px; }
+.faq.pub-faq .intro h2 { font-size: 46px; margin-top: 0; }
+.pub-faq .cols { grid-template-columns: 443px 544px; column-gap: 112px; margin-top: 94px; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1200px) {
   .services { height: auto; padding-bottom: 80px; }
@@ -214,6 +257,16 @@ p { margin: 0; }
   .form-band .note { width: 100%; max-width: 519px; height: 425px; position: relative !important; margin: 0 auto 30px; }
   .form-band .note-text { left: 50%; margin-left: -152px; }
   .form-band .form { width: 100%; }
+  .pub-process, .pub-dark, .pub-own { height: auto; padding: 80px 0; }
+  .pub-process .process-head { margin-bottom: 40px; }
+  .pub-card { width: auto; height: auto; margin-bottom: 30px; padding: 40px 6vw; }
+  .pub-card > * { position: static; }
+  .pub-card h4 { width: auto; margin-top: 20px; }
+  .pub-card .text { width: auto !important; margin-top: 20px; }
+  .pub-note, .pub-dark .lead, .pub-dark .body, .pub-own .own-text { width: auto; }
+  .pub-dark .body { margin-top: 40px; }
+  .pub-own .own-img { width: 100%; height: auto; margin-top: 50px; }
+  .pub-faq .cols { grid-template-columns: 443px 444px; column-gap: 40px; }
 }
 @media (max-width: 900px) {
   :root { --header-h: 84px; }
@@ -247,6 +300,9 @@ p { margin: 0; }
   .faq .cols .acc:first-child { border-bottom: 0; }
   .acc-item button { font-size: 21px; }
   .acc-item .answer { max-width: none; }
+  .acc.dark .acc-item button { font-size: 24px; }
+  .pub-hero h1 { font-size: 44px; }
+  .pub-faq .cols { grid-template-columns: 1fr; }
   .page-hero { height: auto; min-height: 520px; padding: 150px 6vw 80px; }
   .page-hero h1 { font-size: 44px; }
   .paths h2, .h2-red { font-size: 38px; }
