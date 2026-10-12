@@ -283,7 +283,7 @@ p { margin: 0; }
 
 /* ---------- about page ---------- */
 .about-hero { height: 695px; padding: 500px 0 0 105px; }
-.about-hero h1 { max-width: 960px; line-height: 1.05; }
+.about-hero h1 { max-width: 760px; line-height: 1.05; }
 
 .about-bio { height: 786px; }
 .about-bio .portrait { left: 206px; top: 94px; width: 443px; height: 615px; object-fit: cover; }
@@ -297,7 +297,7 @@ p { margin: 0; }
 .diff-cols p { margin-top: 36px; line-height: 1.53; }
 .diff-cols p + p { margin-top: 16px; }
 
-.about-serve { height: 1093px; background: #1D1412 url("../images/about-bg-2.png") center / cover no-repeat; color: #fff; }
+.about-serve { height: 1093px; background: linear-gradient(rgba(29, 20, 18, .62), rgba(29, 20, 18, .62)), #1D1412 url("../images/about-pen-still.jpg") center / cover no-repeat; color: #fff; }
 .about-serve .col { top: 147px; }
 .about-serve .left { left: 206px; width: 393px; }
 .about-serve .right { left: 761px; width: 443px; }
@@ -316,6 +316,37 @@ p { margin: 0; }
 .about-begin .text { max-width: 594px; margin: 48px auto 0; line-height: 1.5; }
 .about-begin .text p + p { margin-top: 16px; }
 .about-begin .btn-solid { width: 292px; height: 63px; margin-top: 30px; }
+
+/* ---------- our titles page ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.books-hero { height: 466px; padding: 275px 0 0 105px; }
+.books-hero h1 { max-width: 847px; line-height: 1.05; }
+
+.release { background: var(--cream) url("../images/books-bg.png") center / cover no-repeat; overflow: hidden; }
+.release.r1 { height: 913px; }
+.release.r2 { height: 961px; }
+.marquee { position: absolute; left: 0; width: 1410px; height: 150px; overflow: visible; }
+.marquee text { font-family: var(--sans); font-size: 64px; fill: rgba(176, 156, 104, .55); letter-spacing: -.01em; }
+.release .book { z-index: 1; }
+.release .info { width: 594px; z-index: 1; line-height: 1.53; }
+.release .buy { display: flex; gap: 11px; margin-top: 23px; }
+.release .buy .btn-solid { width: 292px; height: 63px; font-size: 19px; }
+.release .avail { display: flex; align-items: center; gap: 20px; margin-top: 28px; padding-left: 9px; font-size: 20px; }
+.release .avail img { width: 445px; }
+
+.books-quote { background: var(--cream); display: grid; grid-template-columns: 594px 594px; gap: 12px; justify-content: center; padding: 45px 0 60px; }
+.q-card { background: var(--white); border-radius: 24px; height: 688px; display: flex; align-items: center; padding: 0 51px; }
+.q-card h3 { font-size: 46px; line-height: 1.15; }
+.q-img { border-radius: 24px; overflow: hidden; height: 688px; }
+.q-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.more-titles { background: var(--cream); display: flex; gap: 0; padding: 88px 0 130px 105px; }
+.more-titles h2 { flex: 0 0 202px; font-size: 56px; color: var(--red); line-height: 1.08; }
+.title-grid { display: grid; grid-template-columns: repeat(3, 292px); column-gap: 61px; row-gap: 100px; }
+.title img { width: 286px; height: 357px; object-fit: cover; }
+.title .name { margin-top: 41px; font-size: 22px; }
+.title p + p { font-size: 20px; margin-top: 10px; }
+.title .btn-solid { width: 292px; height: 63px; margin-top: 44px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1200px) {
@@ -364,6 +395,16 @@ p { margin: 0; }
   .about-serve .col + .col { margin-top: 60px; }
   .diff-cols { grid-template-columns: minmax(0, 500px); row-gap: 40px; padding: 0 6vw; }
   .diff-cols h4 { min-height: 0; }
+  .release.r1, .release.r2 { height: auto; padding: 60px 0; }
+  .marquee { display: none; }
+  .release .book { width: 100% !important; max-width: 480px; margin: 0 auto 30px; }
+  .release .info { width: auto; }
+  .books-quote { grid-template-columns: minmax(0, 594px); padding: 45px 6vw 60px; }
+  .q-card, .q-img { height: auto; min-height: 360px; padding-top: 40px; padding-bottom: 40px; }
+  .q-img { padding: 0; }
+  .more-titles { flex-direction: column; padding: 80px 6vw; }
+  .more-titles h2 { flex: none; margin-bottom: 40px; }
+  .title-grid { grid-template-columns: repeat(2, 292px); }
 }
 @media (max-width: 900px) {
   :root { --header-h: 84px; }
@@ -408,6 +449,13 @@ p { margin: 0; }
   .about-diff h2, .about-begin h2 { font-size: 38px; padding: 0 6vw; }
   .about-serve h3 { font-size: 36px; }
   .about-begin { padding: 80px 6vw; }
+  .books-hero { padding-top: 200px; height: auto; min-height: 420px; }
+  .release .buy { flex-direction: column; }
+  .release .buy .btn-solid { width: 100%; }
+  .release .avail { flex-direction: column; align-items: flex-start; }
+  .release .avail img { width: 100%; }
+  .q-card h3 { font-size: 30px; }
+  .title-grid { grid-template-columns: minmax(0, 292px); }
   .page-hero { height: auto; min-height: 520px; padding: 150px 6vw 80px; }
   .page-hero h1 { font-size: 44px; }
   .paths h2, .h2-red { font-size: 38px; }
