@@ -45,15 +45,23 @@
   // "New Release" marquee: text flows along the wavy path, looping one phrase at a time.
   var paths = document.querySelectorAll('.marquee textPath');
   if (paths.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var units = Array.prototype.map.call(paths, function (tp) {
-      var count = (tp.textContent.match(/New Release/g) || []).length || 1;
-      return tp.getComputedTextLength() / count;
-    });
+    // Measured lazily: a hidden marquee (mobile) has no length until it is shown.
+    var units = [];
+    var unitOf = function (tp, i) {
+      if (!units[i]) {
+        var count = (tp.textContent.match(/New Release/g) || []).length || 1;
+        units[i] = tp.getComputedTextLength() / count;
+      }
+      return units[i];
+    };
     var start = null;
     var tick = function (now) {
       if (start === null) start = now;
       var moved = (now - start) * 0.04;
-      paths.forEach(function (tp, i) { tp.setAttribute('startOffset', -(moved % units[i])); });
+      paths.forEach(function (tp, i) {
+        var unit = unitOf(tp, i);
+        if (unit) tp.setAttribute('startOffset', -(moved % unit));
+      });
       requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
