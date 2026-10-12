@@ -257,7 +257,7 @@ p { margin: 0; }
 .focus-card h3 { position: absolute; left: 102px; top: 46px; font-size: 46px; line-height: 1.15; }
 .focus-card h4 { position: absolute; left: 254px; top: 49px; font-size: 32px; line-height: 1.15; }
 
-.mkt-options { background: var(--red) url("../images/market-bg-3.png") center / cover no-repeat; color: #fff; text-align: center; padding: 146px 0 75px; }
+.mkt-options { background: var(--red) url("../images/market-bg-4.png") center / cover no-repeat; color: #fff; text-align: center; padding: 146px 0 75px; }
 .mkt-options .mark { width: 98px; margin: 0 auto; }
 .mkt-options h2 { font-size: 56px; font-weight: 700; margin-top: 38px; }
 .mkt-options .lead { max-width: 847px; margin: 13px auto 0; }
@@ -280,6 +280,42 @@ p { margin: 0; }
 .mkt-fit ul { margin: 22px 0 22px; padding-left: 40px; }
 .mkt-fit li { margin-bottom: 10px; }
 .mkt-fit .fit-img { left: 1064px; top: 111px; width: 346px; height: 651px; object-fit: cover; }
+
+/* ---------- about page ---------- */
+.about-hero { height: 695px; padding: 500px 0 0 105px; }
+.about-hero h1 { max-width: 960px; line-height: 1.05; }
+
+.about-bio { height: 786px; }
+.about-bio .portrait { left: 206px; top: 94px; width: 443px; height: 615px; object-fit: cover; }
+.about-bio .bio { left: 761px; top: 168px; width: 544px; font-size: 24px; line-height: 1.6; }
+.about-bio .bio p + p { margin-top: 16px; }
+
+.about-diff { background: var(--cream); padding: 97px 0 90px; }
+.about-diff h2 { font-size: 56px; color: var(--red); text-align: center; margin-top: 30px; }
+.diff-cols { display: grid; grid-template-columns: repeat(3, 292px); column-gap: 111px; justify-content: center; margin-top: 68px; }
+.diff-cols h4 { font-size: 32px; line-height: 1.15; min-height: 74px; text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 3px; text-underline-offset: 8px; }
+.diff-cols p { margin-top: 36px; line-height: 1.53; }
+.diff-cols p + p { margin-top: 16px; }
+
+.about-serve { height: 1093px; background: #1D1412 url("../images/about-bg-2.png") center / cover no-repeat; color: #fff; }
+.about-serve .col { top: 147px; }
+.about-serve .left { left: 206px; width: 393px; }
+.about-serve .right { left: 761px; width: 443px; }
+.about-serve .eyebrow { font-size: 22px; text-transform: uppercase; }
+.about-serve h3 { font-size: 46px; line-height: 1.15; margin-top: 40px; width: 300px; text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 4px; text-underline-offset: 6px; }
+.about-serve .left h3 { width: 393px; }
+.about-serve .body { margin-top: 78px; line-height: 1.5; }
+.about-serve .body p + p, .about-serve .body ol + p, .about-serve .body ul + p { margin-top: 16px; }
+.about-serve ol, .about-serve ul { margin: 22px 0 22px; padding-left: 40px; }
+.about-serve li { margin-bottom: 10px; }
+.about-serve .small { font-size: 18px; line-height: 1.6; }
+
+.about-begin { text-align: center; padding: 178px 0 120px; }
+.about-begin .mark { width: 241px; margin: 0 auto; }
+.about-begin h2 { font-size: 50px; max-width: 594px; margin: 26px auto 0; }
+.about-begin .text { max-width: 594px; margin: 48px auto 0; line-height: 1.5; }
+.about-begin .text p + p { margin-top: 16px; }
+.about-begin .btn-solid { width: 292px; height: 63px; margin-top: 30px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1200px) {
@@ -322,6 +358,12 @@ p { margin: 0; }
   .opt-card { min-height: 0; }
   .mkt-fit h2 { width: auto; }
   .mkt-fit .fit-img { width: 100%; height: auto; }
+  .about-bio, .about-serve { height: auto; padding: 80px 0; }
+  .about-bio .portrait { width: 100%; max-width: 443px; height: auto; margin: 0 auto 40px; }
+  .about-bio .bio, .about-serve .col, .about-serve h3, .about-serve .left h3 { width: auto; }
+  .about-serve .col + .col { margin-top: 60px; }
+  .diff-cols { grid-template-columns: minmax(0, 500px); row-gap: 40px; padding: 0 6vw; }
+  .diff-cols h4 { min-height: 0; }
 }
 @media (max-width: 900px) {
   :root { --header-h: 84px; }
@@ -362,6 +404,10 @@ p { margin: 0; }
   .mkt-intro .big { font-size: 32px; }
   .mkt-options h2 { font-size: 38px; }
   .btn-cream.wide { width: 88vw; }
+  .about-hero { padding-top: 300px; height: auto; min-height: 520px; }
+  .about-diff h2, .about-begin h2 { font-size: 38px; padding: 0 6vw; }
+  .about-serve h3 { font-size: 36px; }
+  .about-begin { padding: 80px 6vw; }
   .page-hero { height: auto; min-height: 520px; padding: 150px 6vw 80px; }
   .page-hero h1 { font-size: 44px; }
   .paths h2, .h2-red { font-size: 38px; }
