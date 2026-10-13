@@ -427,42 +427,26 @@ main { overflow-x: clip; }
 .contact iframe { border: 0; width: 100%; height: 532px; }
 
 /* ---------- book pages ---------- */
-.book-top, .book-video, .book-bottom { background: var(--cream) url("../images/market-bg-3.png") center / cover no-repeat; }
-.book-top { position: relative; min-height: 1191px; padding: 200px 0 110px; }
-.book-top .cover { position: absolute; left: calc(50% + 156.5px); top: 127px; width: calc(50% - 156.5px); height: calc(100% - 127px); max-width: none; object-fit: cover; }
-.book-top .col { width: 610px; margin-left: calc(50% - 557.5px); text-align: center; font-size: 20px; line-height: 1.45; }
-.pill { display: inline-block; border: 4px solid var(--red); border-radius: 40px; padding: 13px 38px; color: var(--red); font-weight: 700; font-size: 20px; text-transform: uppercase; background: var(--white); }
-.book-title { font-size: 46px; color: var(--red); line-height: 1.15; margin-top: 40px; }
-.book-top .desc { margin-top: 10px; }
-.book-top .desc p + p { margin-top: 16px; }
-.book-top .cta { color: var(--red); font-weight: 700; }
-.book-top .avail { display: flex; align-items: center; gap: 16px; margin-top: 30px; text-align: left; }
-.book-top .avail strong { white-space: nowrap; padding-left: 10px; }
-.book-top .avail img { flex: 1 1 auto; min-width: 0; }
-.book-top .buttons { display: flex; flex-direction: column; align-items: center; gap: 11px; margin-top: 48px; }
-.book-top .buttons .btn-solid { width: 494px; height: 63px; font-size: 19px; }
-
-.book-top .signup { border: 0; width: 100%; height: 360px; margin-top: 20px; }
-.book-video { text-align: center; padding: 99px 0 73px; }
-.book-video h4 { font-size: 32px; font-weight: 700; color: var(--red); }
-.book-video p { font-size: 22px; font-weight: 700; margin-top: 10px; }
-.book-video iframe { display: block; border: 0; width: 594px; height: 336px; margin: 40px auto 0; }
-
-.book-bottom { padding: 100px 0 110px; }
-.book-bottom .row { display: flex; align-items: center; margin-left: calc(50% - 580px); }
-.book-bottom .bracket { width: 60px; flex: 0 0 60px; }
-.book-bottom .quote { width: 393px; flex: 0 0 393px; margin-left: 21px; font-size: 20px; line-height: 1.45; }
-.book-bottom .quote .who { margin-top: 16px; }
-.book-bottom .quote .who strong { color: var(--red); }
-.book-bottom .photo { width: 241px; flex: 0 0 241px; height: 337px; object-fit: cover; margin-left: 61px; }
-.book-bottom .about { width: 393px; flex: 0 0 393px; margin-left: 11px; font-size: 20px; line-height: 1.45; }
-.book-bottom .about h4 { font-size: 22px; font-weight: 700; color: var(--red); margin-bottom: 10px; }
-.book-bottom .row2 { display: flex; align-items: center; gap: 11px; margin-left: calc(50% - 549.5px); }
-.book-bottom .row2 .photo { margin-left: 0; height: 320px; }
-.book-bottom .row2 .about { width: 544px; flex-basis: 544px; margin-left: 51px; }
-.book-bottom .row2 + .row { margin-top: 80px; margin-left: calc(50% - 520px); }
-.book-bottom .quote .q + .q { margin-top: 60px; }
-.book-bottom .quote.wide { width: 996px; flex-basis: 996px; }
+/* Each block is placed at the original's Squarespace grid position (stage coords, measured at 1425 wide).
+   .m / .b = content vertically centred / bottom-aligned in its block, like the original. */
+.bk { position: relative; background: var(--cream) url("../images/market-bg-3.png") center / cover no-repeat; font-size: 19.2px; line-height: 1.5; }
+.bk .fe { position: absolute; display: flex; flex-direction: column; justify-content: flex-start; }
+.bk .fe.m { justify-content: center; }
+.bk .fe.b { justify-content: flex-end; }
+.bk .fe.c { text-align: center; }
+.bk .fe p + p { margin-top: 16px; }
+.bk .fe > img { width: 100%; height: 100%; object-fit: contain; }
+.bk .fe.cover > img { object-fit: cover; }
+.bk .fe iframe { display: block; border: 0; width: 100%; }
+.bk .fe .btn-solid { width: 100%; height: 100%; }
+.pill { display: flex; align-items: center; justify-content: center; height: 100%; border: 4px solid var(--red); border-radius: 40px; color: var(--red); font-weight: 700; text-transform: uppercase; background: var(--white); }
+.book-title { font-size: 48px; color: var(--red); line-height: 1.104; }
+.bk .cta { color: var(--red); font-weight: 700; }
+.bk .vid-h { font-size: 32px; line-height: 1.152; font-weight: 700; color: var(--red); }
+.bk .vid-p, .bk .about-t { font-size: 22.4px; font-weight: 700; }
+.bk .about-t { color: var(--red); }
+.bk .who { margin-top: 16px; }
+.bk .who strong { color: var(--red); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1200px) {
@@ -543,21 +527,20 @@ main { overflow-x: clip; }
   .title-grid .title:nth-child(n+4):nth-child(-n+6) { margin-top: 0; }
   .contact { height: auto; padding: 180px 0 80px; }
   .contact h2, .contact .lead, .contact .form { width: auto; margin-top: 30px; }
-  .book-top { min-height: 0; padding: 150px 6vw 60px; display: flex; flex-direction: column-reverse; }
-  .book-top .cover { position: static; width: 100%; height: auto; max-width: 480px; margin: 40px auto 0; }
-  .book-top .col { width: auto !important; margin: 0 !important; }
-  .book-top .buttons .btn-solid { width: 100% !important; }
-  .book-video { padding: 70px 6vw; }
-  .book-video iframe { width: 100%; height: 56vw; }
-  .book-bottom { padding: 70px 6vw; }
-  .book-bottom .row { flex-wrap: wrap; margin: 0; gap: 30px; }
-  .book-bottom .bracket { display: none; }
-  .book-bottom .quote, .book-bottom .about { flex: 1 1 100%; width: auto; margin: 0; }
-  .book-bottom .photo { margin: 0; }
-  .book-bottom .row2 { flex-wrap: wrap; margin: 0; }
-  .book-bottom .row2 .photo { width: calc(50% - 6px); flex-basis: calc(50% - 6px); }
-  .book-bottom .row2 + .row { margin: 40px 0 0; }
-  .book-bottom .row2 .about { flex: 1 1 100% !important; width: auto !important; margin: 0; }
+  .bk { height: auto !important; padding: 70px 6vw; }
+  .bk.bk-top { padding-top: 150px; }
+  .bk .stage { width: auto; margin: 0; height: auto; display: flex; flex-direction: column; gap: 20px; }
+  .bk .fe { position: static; width: auto !important; height: auto !important; }
+  .bk .fe > img { width: auto; max-width: 100%; height: auto; align-self: center; }
+  .bk .fe.photo > img { max-width: 320px; }
+  .bk .fe.brk { display: none; }
+  .bk .fe.cover { order: 99; margin-top: 20px; }
+  .bk .fe.cover > img { max-width: 480px; width: 100%; }
+  .bk .fe.pill-blk { align-self: center; width: 292px !important; height: 63px !important; }
+  .bk .fe.btnb { height: 63px !important; }
+  .bk .fe.avail-lbl { text-align: left; }
+  .bk .fe.vid iframe { height: 56vw !important; }
+  .bk .fe.about-h { margin-top: 20px; }
   .book-title { font-size: 32px; }
 }
 @media (max-width: 900px) {
