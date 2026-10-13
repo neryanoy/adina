@@ -183,10 +183,10 @@ main { overflow-x: clip; }
 .form-band iframe { display: block; border: 0; width: 539px; max-width: 100%; height: 533px; }
 /* write page: measured against the original at 1425px */
 .form-band.write { height: 769px; }
-.form-band.write .note { left: 111px; top: 92px; width: 546px; height: 546px; }
-.form-band.write .note-text { top: 236px; }
-.form-band.write .note-text h4 { line-height: 1.12; }
-.form-band.write .note-text p { line-height: 1.5; }
+.form-band.write .note { left: 112px; top: 91px; width: 544px; height: 544px; }
+.form-band.write .note-text { top: 231px; }
+.form-band.write .note-text h4 { line-height: 1.152; }
+.form-band.write .note-text p { line-height: 1.5; margin-top: 23px; }
 .form-band.write .form { top: 96px; }
 
 /* ---------- write page ---------- */
@@ -224,14 +224,14 @@ main { overflow-x: clip; }
 .proc-card p { width: 191px; margin-top: 36px; }
 
 /* ---------- publish page ---------- */
-.pub-hero { height: 872px; padding: 211px 0 0 calc(50% - 599.5px); }
+.pub-hero { height: 871.2px; padding: 211px 0 0 calc(50% - 599.5px); }
 .pub-hero::before { background: rgba(0, 0, 0, .56); }
 .pub-hero h1 { font-size: 56px; line-height: 1.08; }
 .pub-hero p { max-width: 443px; margin-top: 12px; }
 .pub-hero p + p { margin-top: 16px; }
 .pub-hero .btn-solid { margin-top: 46px; }
 
-.pub-process { height: 1541px; background-image: linear-gradient(rgba(254, 251, 246, .3), rgba(254, 251, 246, .3)), url("../images/paper-texture.png"); }
+.pub-process { height: 1538.6px; background-image: linear-gradient(rgba(254, 251, 246, .3), rgba(254, 251, 246, .3)), url("../images/paper-texture.png"); }
 .pub-process .process-head { left: 0; right: 0; top: 124px; text-align: center; }
 .pub-process .process-head .eyebrow-c { font-size: inherit; }
 .pub-process .process-head h2 { margin-top: 11px; }
@@ -244,12 +244,12 @@ main { overflow-x: clip; }
 .pub-note { left: 314px; top: 1310px; width: 847px; font-size: 19.2px; }
 .pub-process .sticker { z-index: 2; }
 
-.pub-dark { height: 930px; background: #121820 url("../images/typewriter-still.jpg") center / cover no-repeat; color: var(--white); }
+.pub-dark { height: 929.4px; background: #121820 url("../images/typewriter-still.jpg") center / cover no-repeat; color: var(--white); }
 .pub-dark .lead { left: 113px; top: 121px; width: 494px; font-size: 32px; }
 .pub-dark .body { left: 113px; top: 378px; width: 443px; }
 .pub-dark .body p + p { margin-top: 16px; }
 
-.pub-own { height: 1173px; background-image: linear-gradient(rgba(254, 251, 246, .3), rgba(254, 251, 246, .3)), url("../images/paper-texture.png"); }
+.pub-own { height: 1170.6px; background-image: linear-gradient(rgba(254, 251, 246, .3), rgba(254, 251, 246, .3)), url("../images/paper-texture.png"); }
 .pub-own .own-text { left: 113px; top: 161px; width: 594px; }
 .pub-own .eyebrow { text-transform: uppercase; }
 .pub-own h2 { width: 544px; margin-top: 11px; }
@@ -265,7 +265,7 @@ main { overflow-x: clip; }
 .acc .answer p + p, .acc .answer ul + p { margin-top: 16px; }
 .acc .answer ul { margin: 16px 0 0; padding-left: 40px; }
 
-.faq.pub-faq { height: 789px; padding: 95px 0 0; }
+.faq.pub-faq { height: 802.6px; padding: 95px 0 0; }
 .faq.pub-faq .intro h2 { font-size: 48px; line-height: 1.104; letter-spacing: -.02em; margin-top: 0; }
 .faq.pub-faq .cols { grid-template-columns: 443px 544px; column-gap: 112px; margin-top: 94px; }
 .faq.pub-faq .acc-item button { min-height: 92px; padding: 30px 0; line-height: 1.25; }
@@ -420,17 +420,17 @@ main { overflow-x: clip; }
 
 /* ---------- contact page ---------- */
 .contact { height: 1187px; background: var(--cream) url("../images/market-bg-1.png") center / cover no-repeat; }
-.contact .mark { left: 206px; top: 272px; width: 90px; }
-.contact h2 { left: 206px; top: 428px; width: 342px; }
-.contact .lead { left: 206px; top: 599px; width: 342px; font-size: 24px; line-height: 1.6; }
-.contact .form { left: 711px; top: 257px; width: 494px; }
+.contact .mark { left: 213px; top: 272px; width: 90px; }
+.contact h2 { left: 213px; top: 428px; width: 342px; }
+.contact .lead { left: 213px; top: 599px; width: 342px; font-size: 25.6px; line-height: 1.5; }
+.contact .form { left: 718px; top: 257px; width: 494px; }
 .contact iframe { border: 0; width: 100%; height: 532px; }
 
 /* ---------- book pages ---------- */
 .book-top, .book-video, .book-bottom { background: var(--cream) url("../images/market-bg-3.png") center / cover no-repeat; }
 .book-top { position: relative; min-height: 1191px; padding: 200px 0 110px; }
-.book-top .cover { position: absolute; left: 862px; top: 127px; width: calc(100% - 862px); height: calc(100% - 127px); max-width: none; object-fit: cover; }
-.book-top .col { width: 594px; margin-left: 156px; text-align: center; font-size: 20px; line-height: 1.45; }
+.book-top .cover { position: absolute; left: calc(50% + 156.5px); top: 127px; width: calc(50% - 156.5px); height: calc(100% - 127px); max-width: none; object-fit: cover; }
+.book-top .col { width: 610px; margin-left: calc(50% - 557.5px); text-align: center; font-size: 20px; line-height: 1.45; }
 .pill { display: inline-block; border: 4px solid var(--red); border-radius: 40px; padding: 13px 38px; color: var(--red); font-weight: 700; font-size: 20px; text-transform: uppercase; background: var(--white); }
 .book-title { font-size: 46px; color: var(--red); line-height: 1.15; margin-top: 40px; }
 .book-top .desc { margin-top: 10px; }
@@ -439,7 +439,7 @@ main { overflow-x: clip; }
 .book-top .avail { display: flex; align-items: center; gap: 16px; margin-top: 30px; text-align: left; }
 .book-top .avail strong { white-space: nowrap; padding-left: 10px; }
 .book-top .avail img { flex: 1 1 auto; min-width: 0; }
-.book-top .buttons { display: flex; flex-direction: column; align-items: center; gap: 11px; margin-top: 40px; }
+.book-top .buttons { display: flex; flex-direction: column; align-items: center; gap: 11px; margin-top: 48px; }
 .book-top .buttons .btn-solid { width: 494px; height: 63px; font-size: 19px; }
 
 .book-top .signup { border: 0; width: 100%; height: 360px; margin-top: 20px; }
@@ -449,7 +449,7 @@ main { overflow-x: clip; }
 .book-video iframe { display: block; border: 0; width: 594px; height: 336px; margin: 40px auto 0; }
 
 .book-bottom { padding: 100px 0 110px; }
-.book-bottom .row { display: flex; align-items: center; margin-left: 125px; }
+.book-bottom .row { display: flex; align-items: center; margin-left: calc(50% - 580px); }
 .book-bottom .bracket { width: 60px; flex: 0 0 60px; }
 .book-bottom .quote { width: 393px; flex: 0 0 393px; margin-left: 21px; font-size: 20px; line-height: 1.45; }
 .book-bottom .quote .who { margin-top: 16px; }
@@ -457,10 +457,10 @@ main { overflow-x: clip; }
 .book-bottom .photo { width: 241px; flex: 0 0 241px; height: 337px; object-fit: cover; margin-left: 61px; }
 .book-bottom .about { width: 393px; flex: 0 0 393px; margin-left: 11px; font-size: 20px; line-height: 1.45; }
 .book-bottom .about h4 { font-size: 22px; font-weight: 700; color: var(--red); margin-bottom: 10px; }
-.book-bottom .row2 { display: flex; align-items: center; gap: 11px; margin-left: 156px; }
+.book-bottom .row2 { display: flex; align-items: center; gap: 11px; margin-left: calc(50% - 549.5px); }
 .book-bottom .row2 .photo { margin-left: 0; height: 320px; }
 .book-bottom .row2 .about { width: 544px; flex-basis: 544px; margin-left: 51px; }
-.book-bottom .row2 + .row { margin-top: 80px; margin-left: 185px; }
+.book-bottom .row2 + .row { margin-top: 80px; margin-left: calc(50% - 520px); }
 .book-bottom .quote .q + .q { margin-top: 60px; }
 .book-bottom .quote.wide { width: 996px; flex-basis: 996px; }
 
