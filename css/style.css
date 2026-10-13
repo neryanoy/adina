@@ -276,12 +276,12 @@ main { overflow-x: clip; }
 .form-band.plain iframe { width: 594px; height: 578px; }
 
 /* ---------- market page ---------- */
-.mkt-hero { height: 946px; padding: 300px 0 0 calc(50% - 599.5px); }
+.mkt-hero { height: 944.8px; padding: 300px 0 0 calc(50% - 599.5px); }
 .mkt-hero::before { background: rgba(0, 0, 0, .66); }
 .mkt-hero p { max-width: 393px; margin-top: 26px; }
 .mkt-hero .btn-solid { margin-top: 50px; }
 
-.mkt-intro { height: 841px; background: var(--cream) center / cover no-repeat; background-image: linear-gradient(rgba(254, 251, 246, .15), rgba(254, 251, 246, .15)), url("../images/market-bg-1.png"); }
+.mkt-intro { height: 839.4px; background: var(--cream) center / cover no-repeat; background-image: linear-gradient(rgba(254, 251, 246, .15), rgba(254, 251, 246, .15)), url("../images/market-bg-1.png"); }
 .mkt-intro .big { left: 113px; top: 95px; width: 897px; font-size: 48px; font-weight: 700; color: var(--red); line-height: 1.104; }
 .mkt-intro .left { left: 113px; top: 316px; width: 494px; }
 .mkt-intro .left p + p { margin-top: 16px; }
@@ -290,7 +290,7 @@ main { overflow-x: clip; }
 .mkt-intro .believe li { margin-bottom: 11.1px; }
 .mkt-intro .asset { left: 718px; top: 647px; width: 594px; }
 
-.mkt-focus { height: 1186px; background: #EEE4CF center / cover no-repeat; background-image: linear-gradient(rgba(239, 231, 210, .3), rgba(239, 231, 210, .3)), url("../images/market-bg-2.png"); }
+.mkt-focus { height: 1184.8px; background: #EEE4CF center / cover no-repeat; background-image: linear-gradient(rgba(239, 231, 210, .3), rgba(239, 231, 210, .3)), url("../images/market-bg-2.png"); }
 .mkt-focus .process-head { left: 0; right: 0; top: 121px; text-align: center; }
 .mkt-focus .process-head .eyebrow-c { font-size: inherit; }
 .mkt-focus .process-head h2 { margin-top: 3px; }
@@ -299,11 +299,11 @@ main { overflow-x: clip; }
 .focus-card.first h3 { top: 45.5px; }
 .focus-card h4 { position: absolute; left: 252px; top: 50px; font-size: 32px; }
 
-.mkt-options { height: 1902px; background: var(--red); color: var(--white); text-align: center; padding: 74px 0 0; }
+.mkt-options { height: 1902.4px; background: var(--red); color: var(--white); text-align: center; padding: 74px 0 0; }
 .mkt-options .mark { width: 247px; height: 247px; object-fit: contain; margin: 0 auto; }
 .mkt-options h2 { font-size: 56px; font-weight: 700; margin-top: -63px; }
-.mkt-options .mark, .mkt-options h2 { position: relative; left: 21px; }
-.mkt-options .lead { max-width: 847px; margin: 12.5px 0 0 314px; }
+.mkt-options .mark, .mkt-options h2 { position: relative; left: 25px; }
+.mkt-options .lead { max-width: 847px; margin: 12.5px 0 0 calc(50% - 398px); }
 .opt-cards { display: grid; grid-template-columns: repeat(3, 342px); column-gap: 62px; justify-content: start; padding-left: calc(50% - 549.5px); margin-top: 124px; text-align: left; }
 .opt-card { height: 1197px; background: linear-gradient(transparent 30px, #C53B26 30px); }
 .opt-card.late { background: linear-gradient(transparent 67px, #C53B26 67px); }
@@ -317,7 +317,7 @@ main { overflow-x: clip; }
 .opt-card .body li { margin-bottom: 10px; }
 .btn-cream.wide { width: 393px; margin-top: 47px; }
 
-.mkt-fit { height: 872px; }
+.mkt-fit { height: 872.1px; }
 .mkt-fit .fit-text { left: 264px; top: 161px; width: 494px; }
 .mkt-fit .eyebrow { text-transform: uppercase; }
 .mkt-fit h2 { width: 342px; margin-top: 51px; }
@@ -327,7 +327,7 @@ main { overflow-x: clip; }
 .mkt-fit li:last-child { margin-bottom: 0; }
 .mkt-fit ul + p { margin-top: 22px; }
 .mkt-fit .fit-img { left: 1071px; top: 110px; width: 354px; height: 651px; object-fit: cover; object-position: 47.2% 32%; }
-.form-band.mkt { height: 878px; }
+.form-band.mkt { height: 876.2px; }
 .form-band.mkt .note { top: 168px; height: 578px; object-fit: cover; }
 .form-band.mkt .note-text { top: 315px; }
 .form-band.mkt .note-text p { margin-top: 37px; }
@@ -517,6 +517,8 @@ main { overflow-x: clip; }
   .mkt-focus .process-head { margin-bottom: 40px; }
   .focus-card { width: auto; height: auto; display: flex; align-items: center; gap: 40px; padding: 30px 6vw; margin-bottom: 30px; }
   .focus-card h3, .focus-card h4 { position: static; }
+  .mkt-options { height: auto; padding-bottom: 80px; }
+  .mkt-options .lead { margin: 12.5px auto 0; padding: 0 6vw; }
   .opt-cards { grid-template-columns: minmax(0, 342px); row-gap: 40px; }
   .opt-card { min-height: 0; }
   .mkt-fit h2 { width: auto; }
