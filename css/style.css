@@ -489,10 +489,14 @@ main { overflow-x: clip; }
   .form-band .form { width: 100%; }
   .form-band.write, .form-band.plain, .form-band.mkt { height: auto; }
   .form-band.plain .note, .form-band.mkt .note { height: auto; }
-  .form-band.plain .note-text, .form-band.mkt .note-text { top: 18%; }
-  .form-band.plain iframe, .form-band.mkt iframe { width: 100%; }
+  .form-band.write .form, .form-band.plain .form, .form-band.mkt .form { width: 100%; }
+  .form-band.write iframe, .form-band.plain iframe, .form-band.mkt iframe { width: 100%; height: 760px; }
+  /* note text sits on the paper: paper spans ~15-77% of the square note image */
+  .form-band.write .note-text, .form-band.plain .note-text, .form-band.mkt .note-text { top: calc(min(480px, 88vw) * .24); width: calc(min(480px, 88vw) * .58); }
+  .form-band.write .note-text h4, .form-band.plain .note-text h4, .form-band.mkt .note-text h4 { font-size: 22px; }
+  .form-band.write .note-text p, .form-band.plain .note-text p, .form-band.mkt .note-text p { font-size: 15px; margin-top: 12px; }
   .form-band.write .note { width: 100%; height: auto; }
-  .form-band.write .note-text { top: 18%; left: 50%; }
+  .form-band.write .note-text { left: 50%; }
   .pub-process, .pub-dark, .pub-own { height: auto; padding: 80px 0; }
   .pub-process .process-head { margin-bottom: 40px; }
   .pub-card { width: auto; height: auto; margin-bottom: 30px; padding: 40px 6vw; }
